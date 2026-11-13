@@ -161,7 +161,7 @@ if menu.startswith("1."):
         """, unsafe_allow_html=True)
 
     with col_right:
-        st.image(generate_stage_visual_banner(6), caption=f"{selected_variety} - కాయ మరియు మొక్క వృద్ధి నమూనా", use_container_width=True)
+                    pass
 
     # Deep Agronomy Card for TAG-24 and others
     if "deep_agronomy" in v_data:
