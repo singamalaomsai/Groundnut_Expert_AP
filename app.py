@@ -247,7 +247,7 @@ elif menu.startswith("2."):
             sc1, sc2 = st.columns([1, 2])
             with sc1:
                 st.image(
-                    generate_stage_visual_banner(stage["stage_id"]),
+                    (stage["stage_id"]),
                     caption=stage["name"],
                     use_container_width=True
                 )
@@ -292,7 +292,7 @@ elif menu.startswith("3."):
 
     col_a, col_b = st.columns([1, 2])
     with col_a:
-        st.image(generate_stage_visual_banner(current_stage["stage_id"]), caption=f"ప్రస్తుత దశ ({das_days}వ రోజు)", use_container_width=True)
+        st.image((current_stage["stage_id"]), caption=f"ప్రస్తుత దశ ({das_days}వ రోజు)", use_container_width=True)
         st.metric("ప్రస్తుత పంట రోజు (DAS)", f"{das_days} రోజులు", f"కోతకు ఇంకా {max(0, total_crop_days - das_days)} రోజులు")
 
     with col_b:
