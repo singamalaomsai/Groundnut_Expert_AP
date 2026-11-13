@@ -353,9 +353,9 @@ elif menu.startswith("4."):
         input_img = Image.open(uploaded_file)
     else:
         v_type = DISEASES_PESTS_DB[demo_choice]["visual_type"]
-        input_img = generate_disease_visual_card(v_type)
+        input_img = Image.new("RGB", (400, 300), color="green")
 
-    annotated_img, cv_metrics = analyze_leaf_image(input_img)
+    annotated_img, cv_metrics = analyze_leaf_image_gemini(input_img)
     active_disease_key = cv_metrics["detected_key"] if uploaded_file is not None else demo_choice
     d_info = DISEASES_PESTS_DB[active_disease_key]
 
