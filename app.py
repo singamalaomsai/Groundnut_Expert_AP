@@ -367,8 +367,6 @@ elif menu.startswith("4."):
         st.image(input_img, caption="1. అప్‌లోడ్ చేసిన అసలు ఫోటో", use_container_width=True)
     with img_c2:
         st.image(annotated_img, caption="2. AI గుర్తించిన తెగులు మచ్చలు (Red Boxes)", use_container_width=True)
-    with img_c3:
-        st.image(generate_disease_visual_card(d_info["visual_type"]), caption=f"3. {active_disease_key.split('(')[0]} నిర్ధారణ చిత్రం", use_container_width=True)
 
     m1, m2, m3, m4 = st.columns(4)
     m1.metric("🎯 గుర్తించిన సమస్య", active_disease_key.split("(")[0])
