@@ -1,0 +1,8 @@
+streamlit
+pandas
+numpy
+Pillow
+plotly
+requests
+opencv-python-headless
+google-generativeai
