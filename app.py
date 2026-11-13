@@ -8,8 +8,6 @@ from knowledge_base import (
     AP_VARIETIES,
     get_variety_lifecycle,
     DISEASES_PESTS_DB,
-    generate_disease_visual_card,
-    generate_stage_visual_banner,
     analyze_leaf_image_gemini,
     AP_MANDI_PRICES,
     GOVT_MSP_GROUNDNUT,
