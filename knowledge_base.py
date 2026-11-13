@@ -2,7 +2,6 @@
 import numpy as np
 import cv2
 from PIL import Image, ImageDraw
-import streamlit as st
 
 # ==============================================================================
 # 1. ఆంధ్రప్రదేశ్ వేరుశనగ రకాల సమగ్ర సమాచారం (AP Groundnut Varieties Database)
@@ -481,6 +480,7 @@ DISEASES_PESTS_DB = {
 import google.generativeai as genai
 from PIL import ImageDraw
 import random
+import streamlit as st
 
 # ఇక్కడ మీ కొత్త AIzaSy... కీని పెట్టండి
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
