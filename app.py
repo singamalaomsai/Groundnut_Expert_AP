@@ -246,11 +246,8 @@ elif menu.startswith("2."):
         with st.expander(f"{stage['icon']} {stage['name']}  —  [{stage['days_range']}]", expanded=(stage["stage_id"] in [1, 4])):
             sc1, sc2 = st.columns([1, 2])
             with sc1:
-                st.image(
-                    (stage["stage_id"]),
-                    caption=stage["name"],
-                    use_container_width=True
-                )
+                st.metric(label="దశ (Stage ID)", value=f"{stage['stage_id']}")
+                st.markdown(f"**{stage['name']}**")
             with sc2:
                 st.markdown(f"**📌 దశ వివరణ:** {stage['summary']}")
                 oc, cc = st.columns(2)
@@ -292,7 +289,7 @@ elif menu.startswith("3."):
 
     col_a, col_b = st.columns([1, 2])
     with col_a:
-        st.image((current_stage["stage_id"]), caption=f"ప్రస్తుత దశ ({das_days}వ రోజు)", use_container_width=True)
+        st.metric(label="ప్రస్తుత దశ", value=f"దశ {current_stage['stage_id']}")
         st.metric("ప్రస్తుత పంట రోజు (DAS)", f"{das_days} రోజులు", f"కోతకు ఇంకా {max(0, total_crop_days - das_days)} రోజులు")
 
     with col_b:
